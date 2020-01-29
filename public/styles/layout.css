@@ -17,7 +17,68 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 40px;
+  text-align: center;
+  font-family: "source sans pro", sans-serif;
+}
+
+/* .logo {
+  font-family: "bungee", sans-serif;
+  font-weight: 300;
+} */
+
+.container {
+  font-weight: 400;
+  background-color: #f4f1ec;
+  width: 90%;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ============================== tweets ============================== */
+
+.tweet{
+  border: 5px solid;
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.tweet span{
+  display: flex;
+}
+
+
+footer{
+  border-top: 5px solid;
+  height: 80px;
+}
+
+.date{
+  padding-top: 30px;
+}
+
+.quote{
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+section.flexbox{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.container1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name{
+  padding-left: 20px;
 }
 
 /*
