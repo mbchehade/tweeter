@@ -7,8 +7,23 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!-- Font body and logo -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,700i&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav related css -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+
+    <!-- header css -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css">
+
+    <!-- new-tweet css -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+
+    <!-- hover css -->
+    <link rel="stylesheet" href="/styles/hover.css" type="text/css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -19,11 +34,36 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav id="navbar">
+      <span class="logo">tweeter</span>
+      <span class="writetweet">Write a new tweet</span>
     </nav>
 
+    <header class="mainheader">
+      <div>
+        <img  src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Moe Chehade</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+      <form action="/tweets" method="POST">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <div class = "button-140">
+          <input class="button" type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </div>
+      </form>
+    </section>
+    <section id='tweets-container'>
+      <!--  -->
+    </section>  
+  </main>
+    
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
