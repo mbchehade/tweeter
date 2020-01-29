@@ -1,0 +1,18 @@
+#navbar{
+  height: 120px;
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #4056A1;
+  color: white;
+  padding: 1.5em;
+  display: flex;
+  place-content: space-between;
+}
+
+.logo {
+  font-family: "bungee", sans-serif;
+  font-weight: 300;
+}
+
