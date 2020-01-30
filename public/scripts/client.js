@@ -11,9 +11,9 @@ $(function(){
    const serializedData = $(this).serialize()
   console.log(serializedData)
    if(serializedData === "text="){
-     slideDown("Field Cannot be Empty")
+     $(".error").text("Field Cannot be Empty")
    }else if(serializedData.length > 145){
-      slideDown("Please Respect the Arbitrary Limit of 140 Chars")
+      $(".error").text("Please Respect the Arbitrary Limit of 140 Chars")
    }else{
       $.ajax({
         method: 'POST',
