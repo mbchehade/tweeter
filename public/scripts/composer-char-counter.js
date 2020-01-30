@@ -6,7 +6,7 @@ $(document).ready(function(){
   .on("keyup", function(){
     const character = maxLength - $(this).val().length
     if($(this).val().length > maxLength){
-      $counter.css('color', 'red')
+      $counter.css('color', '#FF0000')
       // $counter.addClass('red-color')
     } else {
       $counter.css('color', '#545149')
