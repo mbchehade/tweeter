@@ -5,13 +5,21 @@
  */
 
 const renderTweets = function (tweets) {
+  $('#tweets-container').empty()
   // loops through tweets
   for (let item of tweets) {
     // calls createTweetElement for each tweet
     let newTweet = createTweetElement(item)
     // takes return value and appends it to the tweets container
-    $('#tweets-container').append(newTweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+    $('#tweets-container').prepend(newTweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   }
+}
+
+
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
 const createTweetElement = function (tweetData) {
@@ -26,13 +34,13 @@ const createTweetElement = function (tweetData) {
           <section class="flexbox">
             <div class="container1">
               <img  src=${tweetData['user']['avatars']}>
-              <span class="name">${tweetData['user']['name']}</span>
+              <span class="name">${escape(tweetData['user']['name'])}</span>
             </div>
             <div class="container2">
               <div>${tweetData['user']['handle']}</div>
             </div>
           </section>
-          <span class="quote">${tweetData['content']['text']}</span>
+          <span class="quote">${escape(tweetData['content']['text'])}</span>
         </header>
         <footer>
             <span class="date">${diffDays} days ago</span>
@@ -52,21 +60,30 @@ const loadTweets = function () {
 }
 
 $(function(){
-  
+  loadTweets();
   $('form').on('submit', function(event){
     event.preventDefault()
    const serializedData = $(this).serialize()
-   console.log(serializedData)
-  $.ajax({
-    method: 'POST',
-    url: '/tweets',
-    data: serializedData
-  }).then(function (testing){
-    console.log("success")
-  });
-});  
+  console.log(serializedData)
+   if(serializedData === "text="){
+     alert("You Should Type Something")
+   }else if(serializedData.length > 145){
+      alert("You Exceeded 140 Character")
+   }else{
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: serializedData
+      }).then(function (testing) {
+        console.log("success")
+      });
+    
   loadTweets();
+
+   }
+  })
 });
+
 
 
 //when we are wrting jquery functions we are giving it an extra one. 
