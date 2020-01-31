@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' /> 
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
@@ -30,6 +33,9 @@
     <!-- validation css -->
     <link rel="stylesheet" href="/styles/validationDisplay.css" type="text/css">
 
+    <!-- MediaQueri css -->
+    <link rel="stylesheet" href="/styles/mediaQueri.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -42,41 +48,46 @@
     <!-- templates.js -->
     <script type="text/javascript" src="/scripts/templates.js"></script>
 
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/aff0092cda.js" crossorigin="anonymous"></script>
+
 
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
+    
     <nav id="navbar">
       <span class="logo">tweeter</span>
       <span class="toggle"><strong>Write</strong> a new tweet <br> &#x21d3;</span>
     </nav>
-
-    <header class="mainheader">
-      <div>
-        <img  src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <p><span class="firstName">Moe</span> Chehade</p>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error"></div>
-      <form action="/tweets" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <div class = "button-140">
-          <input class="button" type="submit" value="Tweet">
-          <span class="counter">140</span>
+    <section id="content">
+      <header class="mainheader">
+        <div>
+          <img  src="/images/profile-hex.png">
         </div>
-      </form>
-    </section>
-    <section id='tweets-container'>
-      <!--  -->
-    </section>  
-  </main>
+        <br>
+        <div>
+          <p><span class="firstName">Moe</span> Chehade</p>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error"></div>
+        <form action="/tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <div class = "button-140">
+            <input class="button" type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </div>
+        </form>
+      </section>
+      <section id='tweets-container'>
+        <!--  -->
+      </section>  
+    </main>
+  </section>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
