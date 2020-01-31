@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+
+## Screenshots
+
+!["Screenshot of tweet feed"](https://github.com/mbchehade/tweeter/blob/master/docs/tweet-feed.png?raw=true)
+!["Screenshot of tweet textArea"](https://github.com/mbchehade/tweeter/blob/master/docs/textArea.png?raw=true)
