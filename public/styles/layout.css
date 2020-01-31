@@ -55,11 +55,11 @@ body {
 footer{
   border-top: 5px solid;
   height: 80px;
-}
-
-.date{
+  display: flex;
+  justify-content: space-between;
   padding-top: 30px;
 }
+
 
 .quote{
   padding-bottom: 20px;
@@ -94,7 +94,8 @@ section.flexbox{
   align-items: center;
   margin-top: 120px;
 }
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 1024px){
   #content{
     flex-direction: row;
     align-items: flex-start;
@@ -102,14 +103,12 @@ section.flexbox{
     justify-content: space-between;
   }
 
-  .mainheader{
-    width: 30%;
-  }
-
   .container{
     width: 60%;
   }
 }
+
+
 
 
 
