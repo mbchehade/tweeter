@@ -1,5 +1,5 @@
-$(function(){
-  $('.toggle').on('click', function(){
+$(function() {
+  $('.toggle').on('click', function() {
     $('.new-tweet').slideToggle();
   });
 });
