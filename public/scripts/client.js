@@ -23,6 +23,8 @@ $(function() {
         console.log("success");
       });
       loadTweets();
+      $('textarea').val("");
+      $('.error').text("")
     }
   });
 });
