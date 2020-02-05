@@ -68,9 +68,7 @@ footer{
   word-break: break-word;
 }
 
-.quote span{
-  /* word-break: break-word; */
-}
+
 
 section.flexbox{
   display: flex;
