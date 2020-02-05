@@ -65,10 +65,11 @@ footer{
   padding-bottom: 20px;
   padding-left: 20px;
   padding-top: 30px;
+  word-break: break-word;
 }
 
 .quote span{
-  word-wrap: break-word;
+  /* word-break: break-word; */
 }
 
 section.flexbox{
